@@ -1,0 +1,602 @@
+[gd_scene load_steps=46 format=3 uid="uid://y0g2ev8368u1"]
+
+[ext_resource type="Script" path="res://Scripts/level_two.gd" id="1_gtyiv"]
+[ext_resource type="Texture2D" uid="uid://dkn43aqtpwdbj" path="res://Platformer Tileset Market/PNG/Platformer/Ground_02.png" id="8_sgkhx"]
+[ext_resource type="Texture2D" uid="uid://bintn13eojb2v" path="res://Platformer Tileset Market/PNG/Building/Chimney_03.png" id="9_4witb"]
+[ext_resource type="Texture2D" uid="uid://b8ssd5dwojo32" path="res://Platformer Tileset Market/PNG/Building/Roof_A_01.png" id="10_o5djp"]
+[ext_resource type="Texture2D" uid="uid://b702h6gxdkvdg" path="res://Platformer Tileset Market/PNG/Building/Roof_A_02.png" id="11_i7rr6"]
+[ext_resource type="Texture2D" uid="uid://dmd26h41wbl5e" path="res://Platformer Tileset Market/PNG/Building/Roof_A_03.png" id="12_15glb"]
+[ext_resource type="Texture2D" uid="uid://chbjl2pddq01u" path="res://Platformer Tileset Market/PNG/Building/Roof_B_04.png" id="13_02j4u"]
+[ext_resource type="Texture2D" uid="uid://ldx3klfix4ux" path="res://Platformer Tileset Market/PNG/Building/Wall_A_02.png" id="14_wnlcr"]
+[ext_resource type="Texture2D" uid="uid://brnf04bfp57qd" path="res://Platformer Tileset Market/PNG/Building/Wall_A_01.png" id="15_7c6m5"]
+[ext_resource type="Texture2D" uid="uid://b1hhx72aowtjm" path="res://Platformer Tileset Market/PNG/Building/Wall_A_03.png" id="16_xwufe"]
+[ext_resource type="Texture2D" uid="uid://cncobq105csty" path="res://Platformer Tileset Market/PNG/Building/Wall_B_02.png" id="17_3b3nt"]
+[ext_resource type="Texture2D" uid="uid://cofdjbqwkmsld" path="res://Platformer Tileset Market/PNG/Building/Wall_B_01.png" id="18_1k2ud"]
+[ext_resource type="Texture2D" uid="uid://c03fqw0b2wr1j" path="res://Platformer Tileset Market/PNG/Building/Wall_B_03.png" id="19_ihwws"]
+[ext_resource type="Texture2D" uid="uid://cef23yj7gffk5" path="res://Platformer Tileset Market/PNG/Building/Wide_Door_02.png" id="20_bev5v"]
+[ext_resource type="Texture2D" uid="uid://c1pp7u8leokav" path="res://Platformer Tileset Market/PNG/Building/Pillar_01.png" id="21_enrqg"]
+[ext_resource type="Texture2D" uid="uid://c0qc31g2j58bg" path="res://Platformer Tileset Market/PNG/Building/Pillar_02.png" id="22_lyyq3"]
+[ext_resource type="Texture2D" uid="uid://bils3iqaqq7v" path="res://Platformer Tileset Market/PNG/Building/Pillar_05.png" id="23_jme5j"]
+[ext_resource type="Texture2D" uid="uid://c3ooek0wo2esm" path="res://Platformer Tileset Market/PNG/Building/Window_02.png" id="24_7dnwv"]
+[ext_resource type="Texture2D" uid="uid://by1ty28myjrda" path="res://Platformer Tileset Market/PNG/Building/Decor_Roof_01.png" id="25_u1ft1"]
+[ext_resource type="Texture2D" uid="uid://csloagpgdj57w" path="res://Platformer Tileset Market/PNG/Building/Canopy_03.png" id="26_cx2ec"]
+[ext_resource type="Texture2D" uid="uid://bsxwebf2ci673" path="res://Platformer Tileset Market/PNG/Building/Decor_Roof_02.png" id="27_cwjnm"]
+[ext_resource type="Texture2D" uid="uid://txqnytvsterc" path="res://Platformer Tileset Market/PNG/Building/Pillar_07.png" id="28_ewg33"]
+[ext_resource type="Texture2D" uid="uid://cvnjsas37do74" path="res://Platformer Tileset Market/PNG/Building/Window_03.png" id="29_echqf"]
+[ext_resource type="Texture2D" uid="uid://ma5gdx2dhhi8" path="res://Platformer Tileset Market/PNG/Building/Chimney_01.png" id="30_sqpog"]
+[ext_resource type="Texture2D" uid="uid://mex3utv0kib8" path="res://Platformer Tileset Market/PNG/Building/Chimney_02.png" id="31_bgnbe"]
+[ext_resource type="Texture2D" uid="uid://b4psqp6cvb46o" path="res://Platformer Tileset Market/PNG/Environment/Sign_01.png" id="32_r233j"]
+[ext_resource type="Texture2D" uid="uid://cp7ybjjquexx3" path="res://Platformer Tileset Market/PNG/Environment/Fence_01.png" id="33_y744a"]
+[ext_resource type="Texture2D" uid="uid://b6nwjuw40yarc" path="res://Platformer Tileset Market/PNG/Environment/Fence_02.png" id="34_hpn6g"]
+[ext_resource type="Texture2D" uid="uid://udlsq5bvg2dk" path="res://Platformer Tileset Market/PNG/Environment/Fence_03.png" id="35_0btb8"]
+[ext_resource type="Texture2D" uid="uid://c5fltgj4ncdax" path="res://Platformer Tileset Market/PNG/Building/Wall_C_02.png" id="36_qmrl6"]
+[ext_resource type="Texture2D" uid="uid://bdqmlil52opcj" path="res://Platformer Tileset Market/PNG/Building/Wall_C_01.png" id="37_4p5mc"]
+[ext_resource type="Texture2D" uid="uid://d1j6bhno3kgjt" path="res://Platformer Tileset Market/PNG/Building/Wall_C_03.png" id="38_110hf"]
+[ext_resource type="Texture2D" uid="uid://bjegsr6p77g6u" path="res://Platformer Tileset Market/PNG/Building/Wide_Door_04.png" id="39_j3qwu"]
+[ext_resource type="Texture2D" uid="uid://cd7i8a7gga5kt" path="res://Platformer Tileset Market/PNG/Building/Pillar_04.png" id="40_lvusr"]
+[ext_resource type="Texture2D" uid="uid://cokb5x8342s6x" path="res://Platformer Tileset Market/PNG/Building/Pillar_03.png" id="41_mwwku"]
+[ext_resource type="Texture2D" uid="uid://blf00870qldmt" path="res://Platformer Tileset Market/PNG/Building/Stone_Window_01.png" id="42_5e6r3"]
+[ext_resource type="Texture2D" uid="uid://lguaqh1uldap" path="res://Platformer Tileset Market/PNG/Environment/Tool_Board.png" id="43_dsk1y"]
+[ext_resource type="Texture2D" uid="uid://c4ifsakg5f8ic" path="res://Platformer Tileset Market/PNG/Environment/Anvil.png" id="44_7jpie"]
+[ext_resource type="PackedScene" uid="uid://bpkdiohc8d3ie" path="res://Scenes/cat.tscn" id="45_bgj5q"]
+[ext_resource type="PackedScene" uid="uid://7u1cmirtf0nc" path="res://Scenes/collectible.tscn" id="47_r534v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rchkg"]
+size = Vector2(132.25, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gh3wm"]
+size = Vector2(71, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65yo1"]
+size = Vector2(4363, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5758"]
+size = Vector2(76, 1392)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yy578"]
+size = Vector2(49.5, 742.5)
+
+[node name="LevelTwo" type="Node2D"]
+script = ExtResource("1_gtyiv")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Ground" type="Node2D" parent="Environment"]
+position = Vector2(-15, 30)
+metadata/_edit_group_ = true
+
+[node name="Ground02" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1798, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground03" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1670, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground04" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1542, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground05" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1414, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground06" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-2310, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground45" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-2436, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground07" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-2182, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground08" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-2054, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground09" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1926, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground10" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-774, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground11" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-646, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground12" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-518, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground13" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-390, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground14" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1286, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground34" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2298, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground35" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2426, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground36" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2554, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground37" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2682, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground38" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1786, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground39" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1914, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground40" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2042, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground41" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2170, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground42" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2810, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground43" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(2938, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground44" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(3066, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground15" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1158, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground16" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-1030, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground17" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-902, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground18" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(250, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground19" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(378, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground20" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(506, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground21" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(634, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground22" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-262, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground23" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-134, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground24" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(-6, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground25" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(122, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground26" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1274, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground27" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1402, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground28" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1530, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground29" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1658, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground30" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(762, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground31" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(890, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground32" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1018, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="Ground33" type="Sprite2D" parent="Environment/Ground"]
+position = Vector2(1146, 668)
+texture = ExtResource("8_sgkhx")
+
+[node name="House1" type="Node2D" parent="Environment"]
+position = Vector2(823, 8)
+metadata/_edit_group_ = true
+
+[node name="Chimney03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3098, -101)
+texture = ExtResource("9_4witb")
+
+[node name="RoofA01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3144, -10)
+texture = ExtResource("10_o5djp")
+
+[node name="RoofA02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2920, -10)
+texture = ExtResource("11_i7rr6")
+
+[node name="RoofA03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2696, -10)
+texture = ExtResource("12_15glb")
+
+[node name="RoofB04" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2526, 299)
+texture = ExtResource("13_02j4u")
+
+[node name="WallA02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2920, 210)
+texture = ExtResource("14_wnlcr")
+
+[node name="WallA01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3144, 210)
+texture = ExtResource("15_7c6m5")
+
+[node name="WallA03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2696, 210)
+texture = ExtResource("16_xwufe")
+
+[node name="WallB04" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2635, 467)
+texture = ExtResource("17_3b3nt")
+
+[node name="WallB02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2920, 467)
+texture = ExtResource("17_3b3nt")
+
+[node name="WallB01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3144, 467)
+texture = ExtResource("18_1k2ud")
+
+[node name="WallB03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2411, 467)
+texture = ExtResource("19_ihwws")
+
+[node name="WideDoor02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2701, 498)
+texture = ExtResource("20_bev5v")
+
+[node name="Pillar01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2695, 336)
+texture = ExtResource("21_enrqg")
+
+[node name="Pillar02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2847, 476)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2551, 482)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar07" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2847, 461)
+texture = ExtResource("23_jme5j")
+
+[node name="Pillar08" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2551, 460)
+texture = ExtResource("23_jme5j")
+
+[node name="Window02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2917, 9)
+texture = ExtResource("24_7dnwv")
+
+[node name="DecorRoof01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2921, -8)
+texture = ExtResource("25_u1ft1")
+
+[node name="Canopy03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3203, 280)
+texture = ExtResource("26_cx2ec")
+flip_h = true
+
+[node name="DecorRoof02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2619, 144)
+texture = ExtResource("27_cwjnm")
+
+[node name="Pillar06" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2550, 339)
+texture = ExtResource("28_ewg33")
+
+[node name="Pillar04" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2996, 335)
+texture = ExtResource("21_enrqg")
+
+[node name="Pillar09" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3146, 473)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar05" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2847, 335)
+texture = ExtResource("28_ewg33")
+
+[node name="Pillar10" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3146, 332)
+texture = ExtResource("28_ewg33")
+
+[node name="Pillar11" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3148, 462)
+texture = ExtResource("23_jme5j")
+
+[node name="Window04" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3057, 437)
+texture = ExtResource("29_echqf")
+
+[node name="Window05" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2931, 438)
+texture = ExtResource("29_echqf")
+
+[node name="Window03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3018, 185)
+texture = ExtResource("24_7dnwv")
+
+[node name="Window06" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2832, 183)
+texture = ExtResource("24_7dnwv")
+
+[node name="Chimney01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2448, 569)
+texture = ExtResource("30_sqpog")
+
+[node name="Chimney02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2448, 441)
+texture = ExtResource("31_bgnbe")
+
+[node name="Chimney04" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2447, 313)
+texture = ExtResource("9_4witb")
+
+[node name="Sign01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3241, 422)
+texture = ExtResource("32_r233j")
+
+[node name="Fence01" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3177, 578)
+texture = ExtResource("33_y744a")
+
+[node name="Fence02" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-3053, 578)
+texture = ExtResource("34_hpn6g")
+
+[node name="Fence03" type="Sprite2D" parent="Environment/House1"]
+position = Vector2(-2929, 578)
+texture = ExtResource("35_0btb8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Environment/House1"]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/House1/StaticBody2D"]
+position = Vector2(-2610.13, 88)
+shape = SubResource("RectangleShape2D_rchkg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Environment/House1/StaticBody2D"]
+position = Vector2(-2576, 293)
+polygon = PackedVector2Array(-99, -62, 214, 68, 214, 76, -98, 76)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Environment/House1/StaticBody2D"]
+position = Vector2(-2447.5, 307)
+shape = SubResource("RectangleShape2D_gh3wm")
+
+[node name="House2" type="Node2D" parent="Environment"]
+metadata/_edit_group_ = true
+
+[node name="WallC02" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-785, 476)
+texture = ExtResource("36_qmrl6")
+
+[node name="WallC03" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-465, 476)
+texture = ExtResource("36_qmrl6")
+
+[node name="WallC01" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-1007, 476)
+texture = ExtResource("37_4p5mc")
+
+[node name="WallC04" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-241, 476)
+texture = ExtResource("38_110hf")
+
+[node name="WallC05" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-465, 178)
+texture = ExtResource("36_qmrl6")
+
+[node name="WallC06" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-241, 178)
+texture = ExtResource("38_110hf")
+
+[node name="WideDoor04" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-460, 508)
+texture = ExtResource("39_j3qwu")
+
+[node name="WallC07" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-689, 178)
+texture = ExtResource("37_4p5mc")
+
+[node name="Chimney02" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-761, 267)
+texture = ExtResource("31_bgnbe")
+
+[node name="Pillar16" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-305, 402)
+texture = ExtResource("40_lvusr")
+
+[node name="Pillar13" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-944, 411)
+texture = ExtResource("41_mwwku")
+
+[node name="Pillar15" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-629, 406)
+texture = ExtResource("41_mwwku")
+
+[node name="Pillar14" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-750, 409)
+texture = ExtResource("40_lvusr")
+
+[node name="Pillar01" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-847, 347)
+texture = ExtResource("21_enrqg")
+
+[node name="Pillar02" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-534, 347)
+texture = ExtResource("21_enrqg")
+
+[node name="Pillar03" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-301, 346)
+texture = ExtResource("21_enrqg")
+
+[node name="Pillar04" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-686, 488)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar05" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-244, 486)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar06" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-1006, 488)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar08" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-455, 347)
+texture = ExtResource("23_jme5j")
+
+[node name="Pillar10" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-1006, 348)
+texture = ExtResource("23_jme5j")
+
+[node name="Pillar11" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-686, 178)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar09" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-687, 349)
+texture = ExtResource("23_jme5j")
+
+[node name="Pillar12" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-245, 187)
+texture = ExtResource("22_lyyq3")
+
+[node name="Pillar07" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-245, 348)
+texture = ExtResource("23_jme5j")
+
+[node name="Chimney03" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-761, 141)
+texture = ExtResource("9_4witb")
+
+[node name="StoneWindow01" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-587, 188)
+texture = ExtResource("42_5e6r3")
+
+[node name="StoneWindow02" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-342, 186)
+texture = ExtResource("42_5e6r3")
+
+[node name="RoofA02" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-463, -40)
+texture = ExtResource("11_i7rr6")
+
+[node name="RoofA03" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-239, -40)
+texture = ExtResource("12_15glb")
+
+[node name="RoofA01" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-687, -40)
+texture = ExtResource("10_o5djp")
+
+[node name="DecorRoof02" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-784, 70)
+texture = ExtResource("27_cwjnm")
+flip_h = true
+
+[node name="DecorRoof03" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-148, 202)
+texture = ExtResource("27_cwjnm")
+
+[node name="ToolBoard" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-851, 485)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("43_dsk1y")
+
+[node name="Sign01" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-145, 434)
+texture = ExtResource("32_r233j")
+flip_h = true
+
+[node name="Anvil" type="Sprite2D" parent="Environment/House2"]
+position = Vector2(-906, 543)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("44_7jpie")
+
+[node name="ScreenEdge" type="Node2D" parent="."]
+
+[node name="SouthBound" type="StaticBody2D" parent="ScreenEdge"]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenEdge/SouthBound"]
+position = Vector2(326.5, 677)
+shape = SubResource("RectangleShape2D_65yo1")
+
+[node name="WestBound" type="StaticBody2D" parent="ScreenEdge"]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenEdge/WestBound"]
+position = Vector2(-1890, 9)
+shape = SubResource("RectangleShape2D_s5758")
+
+[node name="EastBound" type="StaticBody2D" parent="ScreenEdge"]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScreenEdge/EastBound"]
+position = Vector2(2527, 345)
+shape = SubResource("RectangleShape2D_yy578")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Cat" parent="Enemies" instance=ExtResource("45_bgj5q")]
+position = Vector2(-1498, 565)
+
+[node name="Shinies" type="Node2D" parent="."]
+
+[node name="Collectible" parent="Shinies" instance=ExtResource("47_r534v")]
+position = Vector2(-1625, 245)

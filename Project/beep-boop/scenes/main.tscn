@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=3 uid="uid://1oimf7dx2vhr"]
+
+[ext_resource type="Texture2D" uid="uid://dr5idjqbe4wwi" path="res://sprites/Background/background_static.png" id="1_h2ddu"]
+[ext_resource type="Script" path="res://script/game.gd" id="1_llg3o"]
+[ext_resource type="PackedScene" uid="uid://bfawtpnrljn3f" path="res://scenes/platform.tscn" id="2_jcxo4"]
+[ext_resource type="Script" path="res://script/PlayArea.gd" id="3_7uhcg"]
+[ext_resource type="PackedScene" uid="uid://bk1kwf68nuk0u" path="res://scenes/player.tscn" id="3_k28s3"]
+[ext_resource type="AudioStream" uid="uid://d1narp2glgj5e" path="res://sounds/collect.wav" id="6_aoipo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhmfc"]
+size = Vector2(2730, 1665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgm7y"]
+size = Vector2(15.6233, 26)
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_llg3o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Camera2D"]
+position = Vector2(1, 5)
+scale = Vector2(1.49766, 1.49444)
+texture = ExtResource("1_h2ddu")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Static" type="Node2D" parent="Environment"]
+
+[node name="PlayArea" type="Area2D" parent="Environment/Static"]
+collision_mask = 5
+script = ExtResource("3_7uhcg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Static/PlayArea"]
+position = Vector2(-39, -19.5)
+shape = SubResource("RectangleShape2D_nhmfc")
+
+[node name="Ground" type="Area2D" parent="Environment/Static"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/Static/Ground"]
+position = Vector2(0, 815)
+scale = Vector2(300, 1)
+shape = SubResource("RectangleShape2D_qgm7y")
+
+[node name="Moving" type="Node2D" parent="Environment"]
+
+[node name="Platform" parent="Environment/Moving" instance=ExtResource("2_jcxo4")]
+
+[node name="Player" parent="." instance=ExtResource("3_k28s3")]
+position = Vector2(-150, -150)
+scale = Vector2(0.4, 0.4)
+
+[node name="Sounds" type="Node2D" parent="."]
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("6_aoipo")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+layer = 99
+
+[node name="UI" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="HUD/UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -175.0
+offset_top = 10.0
+offset_right = -87.0
+offset_bottom = 33.0
+grow_horizontal = 0
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 30
+text = "Score: 1000"
+horizontal_alignment = 2
+
+[node name="Ammo" type="Label" parent="HUD/UI"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -252.0
+offset_top = 53.0
+offset_right = -72.0
+offset_bottom = 95.0
+grow_horizontal = 0
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 30
+text = "Ammo: 1000"
+horizontal_alignment = 2
+
+[node name="GameOver" type="Label" parent="HUD/UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -24.5
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 30
+text = "Game Over. You scored %s points!
+Press \"Jump\" to restart."
+horizontal_alignment = 1
